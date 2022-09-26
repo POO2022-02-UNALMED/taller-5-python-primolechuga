@@ -1,19 +1,19 @@
 from zooAnimales.animal import Animal
 class Ave(Animal):
-    listado=[]
+    _listado=[]
     halcones=0
     aguilas=0
     def __init__(self, nombre, edad, habitat, genero,colorPlumas):
         super().__init__(nombre, edad, habitat, genero)
-        self.colorPlumas=colorPlumas
-        Ave.listado.append(self)
+        self._colorPlumas=colorPlumas
+        Ave._listado.append(self)
 
     def movimiento(self):
         return "volar"
 
     @classmethod
     def cantidadAves(cls):
-        return len(Ave.listado)
+        return len(Ave._listado)
 
     @classmethod
     def crearHalcon(cls,nombre,edad,genero):
@@ -26,4 +26,11 @@ class Ave(Animal):
         Ave.aguilas+=1
         aguila=Ave(nombre,edad,"montanas",genero,"blanco y amarillo")
         return aguila
+    
     #getters setters
+
+    def getColorPlumas(self):
+        return self._colorPlumas
+
+    def setColorPlumas(self, color):
+        self._colorPlumas = color

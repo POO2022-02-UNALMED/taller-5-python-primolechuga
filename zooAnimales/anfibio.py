@@ -5,8 +5,8 @@ class Anfibio(Animal):
     salamandras=0
     def __init__(self, nombre, edad, habitat, genero,colorPiel,venenoso):
         super().__init__(nombre, edad, habitat, genero)
-        self.colorPiel=colorPiel
-        self.venenoso=venenoso
+        self._colorPiel=colorPiel
+        self._venenoso=venenoso
         Anfibio.listado.append(self)
     @classmethod
     def cantidadAnfibios():
@@ -28,6 +28,10 @@ class Anfibio(Animal):
         return salamandra
 
     def isVenenoso(self):
-        return self.venenoso
+        return self._venenoso
 
-    #getters setters
+    def getColorPiel(self):
+        return self._colorPiel
+
+    def setColorPiel(self, color):
+        self._colorPiel = color
