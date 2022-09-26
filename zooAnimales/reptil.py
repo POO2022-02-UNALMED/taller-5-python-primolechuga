@@ -24,7 +24,7 @@ class Reptil(Animal):
         return serpiente
 
     @classmethod
-    def cantidadReptiles():
+    def cantidadReptiles(cls):
         return len(Reptil._listado)
 
     def getColorEscamas(self):
@@ -38,7 +38,7 @@ class Reptil(Animal):
 
     def setLargoCola(self, largoCola):
         self._largoCola = largoCola
-        
+
     def getNombre(self):
         return self._nombre
 

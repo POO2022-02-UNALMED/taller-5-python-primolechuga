@@ -59,5 +59,5 @@ class Ave(Animal):
     def setGenero(self, genero):
         self._genero = genero
 
-    def __str__(self):
+    def toString(self):
         return f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}"

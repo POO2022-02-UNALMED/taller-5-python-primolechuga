@@ -22,7 +22,7 @@ class Animal():
         cantRep=Reptil.cantidadReptiles()
         cantPe=Pez.cantidadPeces()
         cantAnf=Anfibio.cantidadAnfibios()
-        txt=f"Mamiferos: {cantMam}\nAves: {cantAve}\nReptiles: {cantRep}\nPeces: {cantPe}\nAnfibios: {cantAnf}"
+        txt=f"Mamiferos : {cantMam}\nAves : {cantAve}\nReptiles : {cantRep}\nPeces : {cantPe}\nAnfibios : {cantAnf}"
         return txt
     @classmethod
     def getTotalAnimales(cls):
